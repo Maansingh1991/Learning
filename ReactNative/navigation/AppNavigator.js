@@ -4,10 +4,12 @@ import { createAppContainer, createStackNavigator } from 'react-navigation';
 import MainTabNavigator from './MainTabNavigator';
 import Demo from '../screens/DemoScreen';
 import DemoHomeScreen from '../screens/DemoHomeScreen';
+import FormScreen from '../screens/FormScreen';
 
 const MainNavigator = createStackNavigator({
   Home: {screen: DemoHomeScreen},
   Profile: {screen: Demo},
+  FormScreen:{screen:FormScreen}
 });
 
 export default createAppContainer(MainNavigator);
