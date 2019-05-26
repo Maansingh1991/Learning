@@ -18,8 +18,11 @@ function Users() {
   return <h2>Users</h2>;
 }
 
-function AppRouter() {
+export const myContext= React.createContext();
+
+export function AppRouter() {
   return (
+    <myContext.Provider value="demo">
     <Router>
       <div>
         <nav>
@@ -47,7 +50,7 @@ function AppRouter() {
        
       </div>
     </Router>
+    </myContext.Provider>
   );
 }
 
-export default AppRouter;

@@ -1,3 +1,5 @@
+import {takeEvery,put,takeLatest} from "redux-saga/effects";
+
 export function printText(data) {
     console.log("Action is being fired");
     return {
@@ -17,3 +19,12 @@ export function printText(data) {
     }
   }
   
+
+
+  export function* demoAPICallWithSage(data){
+    debugger;
+    yield put( {
+      type : "API_DEMO_SUCCESS",
+      payload:data
+    })
+  }
